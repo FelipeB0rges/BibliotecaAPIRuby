@@ -1,0 +1,27 @@
+<p>
+  <strong>Nome:</strong>
+  <%= @livro.nome %>
+</p>
+
+<p>
+  <strong>Autor:</strong>
+  <%= @livro.autor %>
+</p>
+
+<p>
+  <strong>Preço:</strong>
+  <%= @livro.preco %>
+</p>
+
+<p>
+  <strong>Ativo:</strong>
+  <%= @livro.ativo %>
+</p>
+
+<p>
+  <strong>Data:</strong>
+  <%= @livro.data %>
+</p>
+
+<%= link_to 'Editar', edit_livro_path(@livro) %> |
+<%= link_to 'Voltar', livros_path %>

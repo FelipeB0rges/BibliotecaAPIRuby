@@ -1,0 +1,43 @@
+<%= form_with(model: livro, local: true) do |form| %>
+    <% if livro.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(livro.errors.count, "error") %> proibiu este livro de ser salvo:</h2>
+  
+        <ul>
+          <% livro.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+  
+    <div class="field">
+      <%= form.label :nome %>
+      <%= form.text_field :nome %>
+    </div>
+  
+    <div class="field">
+      <%= form.label :autor %>
+      <%= form.text_field :autor %>
+    </div>
+  
+    <div class="field">
+      <%= form.label :preco %>
+      <%= form.text_field :preco %>
+    </div>
+  
+    <div class="field">
+      <%= form.label :ativo %>
+      <%= form.check_box :ativo %>
+    </div>
+  
+    <div class="field">
+      <%= form.label :data %>
+      <%= form.datetime_select :data %>
+    </div>
+  
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+  <% end %>
+  
